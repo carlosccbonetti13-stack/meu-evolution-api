@@ -12,13 +12,13 @@ services:
       - key: SERVER_PORT
         value: 8080
       - key: SERVER_URL
-        value: https://onrender.com # Substitua depois pela sua URL real
+        value: https://meu-evolution-api-4kz8.onrender.com # Substitua depois pela sua URL real
       - key: API_VERSION
         value: v1
       - key: AUTHENTICATION_TYPE
         value: apikey
       - key: AUTHENTICATION_API_KEY
-        value: sua_chave_api_super_secreta_aqui
+        value: NARUTO28
 
       # CONFIGURAÇÃO AUTOMÁTICA DO BANCO NO RENDER
       - key: DATABASE_ENABLED
