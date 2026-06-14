@@ -1,8 +1,8 @@
 FROM atendai/evolution-api:latest
 
-# Expõe a porta padrão da Evolution API
+# Define a porta padrão do contêiner
+ENV PORT=8080
 EXPOSE 8080
 
-# Comando para iniciar a aplicação
+# Comando oficial de inicialização da Evolution API
 CMD ["node", "dist/src/main.js"]
-
