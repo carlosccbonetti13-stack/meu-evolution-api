@@ -2,8 +2,8 @@ services:
   - type: web
     name: evolution-api
     env: docker
-    plan: free # Mude para 'web' ou outro plano pago se precisar de mais recursos
-    region: ohio # Escolha a região de sua preferência
+    plan: free
+    region: ohio
     envVars:
       - key: PORT
         value: 8080
@@ -12,10 +12,27 @@ services:
       - key: SERVER_PORT
         value: 8080
       - key: SERVER_URL
-        value: https://onrender.com # Substitua pela URL final que o Render te der
+        value: https://onrender.com # Substitua depois pela sua URL real
       - key: API_VERSION
         value: v1
       - key: AUTHENTICATION_TYPE
         value: apikey
       - key: AUTHENTICATION_API_KEY
-        value: sua_chave_api_super_secreta_aqui # Troque por uma senha forte
+        value: sua_chave_api_super_secreta_aqui
+
+      # CONFIGURAÇÃO AUTOMÁTICA DO BANCO NO RENDER
+      - key: DATABASE_ENABLED
+        value: "true"
+      - key: DATABASE_PROVIDER
+        value: "postgresql"
+      - key: DATABASE_CONNECTION_URI
+        fromDatabase:
+          name: evolution-db
+          property: connectionString
+      - key: DATABASE_SAVE_DATA_INSTANCE
+        value: "true"
+
+databases:
+  - name: evolution-db
+    plan: free
+    region: ohio
