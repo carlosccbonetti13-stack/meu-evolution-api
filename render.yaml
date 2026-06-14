@@ -18,23 +18,14 @@ services:
       - key: AUTHENTICATION_TYPE
         value: apikey
       - key: AUTHENTICATION_API_KEY
-        value: sua_chave_api_super_secreta_aqui # Coloque sua senha aqui
+        value: NARUTO28
 
-      # CORREÇÃO DO BANCO DE DADOS
+      # LINK CONECTADO DIRETAMENTE
       - key: DATABASE_ENABLED
         value: "true"
       - key: DATABASE_PROVIDER
         value: "postgresql"
       - key: DATABASE_CONNECTION_URI
-        fromDatabase:
-          name: evolution-db
-          property: connectionString
+        value: postgresql://evolution_user:KM8vEDOIZ4AYLOXtkuubv5YenKHW52J0@dpg-d8nemj3bc2fs73evmcm0-a/evolution_rmbk
       - key: DATABASE_SAVE_DATA_INSTANCE
         value: "true"
-
-databases:
-  - name: evolution-db
-    plan: free
-    region: ohio
-    databaseName: evolution
-    user: evolution_user
