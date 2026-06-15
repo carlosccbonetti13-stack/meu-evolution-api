@@ -20,14 +20,15 @@ services:
       - key: AUTHENTICATION_API_KEY
         value: NARUTO28
 
-      # CONEXÃO DO BANCO DE DADOS (CONFIGURAÇÃO ISOLADA)
+      # CONEXÃO DO BANCO DE DADOS CORRIGIDA
       - key: DATABASE_ENABLED
         value: "true"
       - key: DATABASE_PROVIDER
         value: "postgresql"
+      # INSIRA A URL EXTERNA ABAIXO (Adicionando o .ohio-postgres.render.com correspondente ou a URL externa copiada do painel)
       - key: DATABASE_CONNECTION_URI
-        value: postgresql://evolution_user:KM8vEDOIZ4AYLOXtkuubv5YenKHW52J0@dpg-d8nemj3bc2fs73evmcm0-a/evolution_rmbk
+        value: postgresql://evolution_user:KM8vEDOIZ4AYLOXtkuubv5YenKHW52J0@://render.com
       - key: DATABASE_CONNECTION_STRING
-        value: postgresql://evolution_user:KM8vEDOIZ4AYLOXtkuubv5YenKHW52J0@dpg-d8nemj3bc2fs73evmcm0-a/evolution_rmbk
+        value: postgresql://evolution_user:KM8vEDOIZ4AYLOXtkuubv5YenKHW52J0@://render.com
       - key: DATABASE_SAVE_DATA_INSTANCE
         value: "true"
