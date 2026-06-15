@@ -1,18 +1,23 @@
 FROM atendai/evolution-api:latest
 
-# Injeta as variáveis diretamente na construção do contêiner
+# DESATIVAR REDIS E ATIVAR CACHE LOCAL DEFINITIVAMENTE
+ENV CACHE_PROVIDER="local"
+ENV CACHE_REDIS_ENABLED="false"
+ENV REDIS_ENABLED="false"
+
+# CHAVES DE AUTENTICAÇÃO
+ENV AUTHENTICATION_TYPE="apikey"
+ENV AUTHENTICATION_API_KEY="NARUTO28"
+ENV GLOBAL_API_KEY="NARUTO28"
+
+# VARIÁVEIS DO BANCO POSTGRESQL
 ENV DATABASE_ENABLED="true"
 ENV DATABASE_PROVIDER="postgresql"
 ENV DATABASE_CONNECTION_URI="postgresql://evolution_user:KM8vEDOIZ4AYLOXtkuubv5YenKHW52J0@dpg-d8nemj3bc2fs73evmcm0-a/evolution_rmbk"
 ENV DATABASE_CONNECTION_STRING="postgresql://evolution_user:KM8vEDOIZ4AYLOXtkuubv5YenKHW52J0@dpg-d8nemj3bc2fs73evmcm0-a/evolution_rmbk"
 
-# Configurações de inicialização da porta
+# CONFIGURAÇÕES DE PORTA DO RENDER
 ENV PORT=8080
 EXPOSE 8080
 
 CMD ["node", "dist/src/main.js"]
-
-# Configurações de autenticação
-ENV AUTHENTICATION_TYPE="apikey"
-ENV AUTHENTICATION_API_KEY="NARUTO28"
-ENV GLOBAL_API_KEY="NARUTO28"
