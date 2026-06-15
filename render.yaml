@@ -46,3 +46,9 @@ services:
         value: "2.3000.1028148389"
       - key: HOST
         value: "0.0.0.0"
+        - key: HOST
+        value: "0.0.0.0"
+      - key: SERVER_HOST
+        value: "0.0.0.0"
+      - key: BACKEND_SERVER_HOST
+        value: "0.0.0.0"
