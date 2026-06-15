@@ -52,3 +52,5 @@ services:
         value: "0.0.0.0"
       - key: BACKEND_SERVER_HOST
         value: "0.0.0.0"
+        - key: QRCODE_LIMIT
+        value: "10"
