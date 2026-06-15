@@ -20,12 +20,14 @@ services:
       - key: AUTHENTICATION_API_KEY
         value: NARUTO28
 
-      # LINK CONECTADO DIRETAMENTE
+      # CONEXÃO DO BANCO DE DADOS (CONFIGURAÇÃO ISOLADA)
       - key: DATABASE_ENABLED
         value: "true"
       - key: DATABASE_PROVIDER
         value: "postgresql"
       - key: DATABASE_CONNECTION_URI
+        value: postgresql://evolution_user:KM8vEDOIZ4AYLOXtkuubv5YenKHW52J0@dpg-d8nemj3bc2fs73evmcm0-a/evolution_rmbk
+      - key: DATABASE_CONNECTION_STRING
         value: postgresql://evolution_user:KM8vEDOIZ4AYLOXtkuubv5YenKHW52J0@dpg-d8nemj3bc2fs73evmcm0-a/evolution_rmbk
       - key: DATABASE_SAVE_DATA_INSTANCE
         value: "true"
