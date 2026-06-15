@@ -4,6 +4,7 @@ services:
     env: docker
     plan: free
     region: ohio
+    healthCheckPath: /
     envVars:
       - key: PORT
         value: 8080
@@ -24,9 +25,9 @@ services:
       - key: DATABASE_PROVIDER
         value: "postgresql"
       - key: DATABASE_CONNECTION_URI
-        value: "postgresql://evolution_user:KM8vEDOIZ4AYLOXtkuubv5YenKHW52J0@dpg-d8nemj3bc2fs73evmcm0-a/evolution_rmbk"
+        value: "postgresql://evolution_user:KM8vEDOIZ4AYLOXtkuubv5YenKHW52J0@dpg-d8nemj3bc2fs73evmcm0-a.ohio-postgres.render.com/evolution_rmbk"
       - key: DATABASE_CONNECTION_STRING
-        value: "postgresql://evolution_user:KM8vEDOIZ4AYLOXtkuubv5YenKHW52J0@dpg-d8nemj3bc2fs73evmcm0-a/evolution_rmbk"
+        value: "postgresql://evolution_user:KM8vEDOIZ4AYLOXtkuubv5YenKHW52J0@dpg-d8nemj3bc2fs73evmcm0-a.ohio-postgres.render.com/evolution_rmbk"
       - key: DATABASE_SAVE_DATA_INSTANCE
         value: "true"
       - key: DATABASE_SAVE_DATA_NEW_MESSAGE
@@ -43,3 +44,5 @@ services:
         value: "false"
       - key: CONFIG_SESSION_PHONE_VERSION
         value: "2.3000.1028148389"
+      - key: HOST
+        value: "0.0.0.0"
