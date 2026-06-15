@@ -11,3 +11,8 @@ ENV PORT=8080
 EXPOSE 8080
 
 CMD ["node", "dist/src/main.js"]
+
+# Configurações de autenticação
+ENV AUTHENTICATION_TYPE="apikey"
+ENV AUTHENTICATION_API_KEY="NARUTO28"
+ENV GLOBAL_API_KEY="NARUTO28"
