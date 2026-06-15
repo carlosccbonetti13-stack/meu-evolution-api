@@ -1,25 +1,19 @@
 FROM atendai/evolution-api:latest
 
-# CORREÇÃO CRUCIAL PARA GERAR O QR CODE NA VERSÃO 2.x
 ENV CONFIG_SESSION_PHONE_VERSION="2.3000.1028148389"
-
-# DESATIVAR REDIS DE VEZ
 ENV CACHE_PROVIDER="local"
 ENV CACHE_REDIS_ENABLED="false"
 ENV REDIS_ENABLED="false"
-
-# CHAVES DE AUTENTICAÇÃO
 ENV AUTHENTICATION_TYPE="apikey"
 ENV AUTHENTICATION_API_KEY="NARUTO28"
 ENV GLOBAL_API_KEY="NARUTO28"
-
-# VARIÁVEIS DO BANCO POSTGRESQL
 ENV DATABASE_ENABLED="true"
 ENV DATABASE_PROVIDER="postgresql"
-ENV DATABASE_CONNECTION_URI="postgresql://evolution_user:KM8vEDOIZ4AYLOXtkuubv5YenKHW52J0@dpg-d8nemj3bc2fs73evmcm0-a/evolution_rmbk"
-ENV DATABASE_CONNECTION_STRING="postgresql://evolution_user:KM8vEDOIZ4AYLOXtkuubv5YenKHW52J0@dpg-d8nemj3bc2fs73evmcm0-a/evolution_rmbk"
-
+ENV DATABASE_CONNECTION_URI="postgresql://evolution_user:KM8vEDOIZ4AYLOXtkuubv5YenKHW52J0@dpg-d8nemj3bc2fs73evmcm0-a.ohio-postgres.render.com/evolution_rmbk"
+ENV DATABASE_CONNECTION_STRING="postgresql://evolution_user:KM8vEDOIZ4AYLOXtkuubv5YenKHW52J0@dpg-d8nemj3bc2fs73evmcm0-a.ohio-postgres.render.com/evolution_rmbk"
 ENV PORT=8080
+ENV HOSTNAME="0.0.0.0"
+
 EXPOSE 8080
 
-CMD ["node", "dist/src/main.js"]
+CMD ["node", "dist/main.js"]
