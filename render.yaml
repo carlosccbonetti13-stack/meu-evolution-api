@@ -54,3 +54,13 @@ services:
         value: "0.0.0.0"
         - key: QRCODE_LIMIT
         value: "10"
+        - key: CACHE_REDIS_ENABLED
+        value: "true"
+      - key: CACHE_REDIS_URI
+        value: "redis://red-d8o97on7f7vs73ef1o5g:6379"
+      - key: CACHE_REDIS_PREFIX_KEY
+        value: "evolution"
+      - key: CACHE_REDIS_SAVE_INSTANCES
+        value: "false"
+      - key: CACHE_LOCAL_ENABLED
+        value: "false"
