@@ -38,23 +38,17 @@ services:
         value: "true"
       - key: DATABASE_SAVE_DATA_CHATS
         value: "true"
-      - key: CACHE_PROVIDER
-        value: "local"
-      - key: CACHE_REDIS_ENABLED
-        value: "false"
       - key: CONFIG_SESSION_PHONE_VERSION
         value: "2.3000.1028148389"
       - key: HOST
-        value: "0.0.0.0"
-        - key: HOST
         value: "0.0.0.0"
       - key: SERVER_HOST
         value: "0.0.0.0"
       - key: BACKEND_SERVER_HOST
         value: "0.0.0.0"
-        - key: QRCODE_LIMIT
+      - key: QRCODE_LIMIT
         value: "10"
-        - key: CACHE_REDIS_ENABLED
+      - key: CACHE_REDIS_ENABLED
         value: "true"
       - key: CACHE_REDIS_URI
         value: "redis://red-d8o97on7f7vs73ef1o5g:6379"
