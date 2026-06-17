@@ -3,7 +3,7 @@ services:
     name: meu-evolution-api
     env: docker
     plan: free
-    region: ohio
+    region: oregon
     healthCheckPath: /
     envVars:
       - key: PORT
